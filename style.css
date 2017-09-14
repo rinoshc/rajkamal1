@@ -133,6 +133,24 @@ color: #000;
     padding-left: 20px;
 }
 
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #777;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav li a:hover,
+ .navbar-default .navbar-nav .active > a {
+    color: #333;
+  }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #333;
+    background-color: transparent;
+}
+
 
 /*---------------------------------------
     Home section
@@ -340,6 +358,64 @@ background: #000;
 font-weight: 400;
 border-color: transparent;
 color: #ffffff;
+}
+
+
+
+.blog-comment .media h3 {
+  display: inline-block;
+  padding-right: 14px;
+}
+
+.blog-comment h3,
+.blog-comment-form h3 {
+  padding-bottom: 18px;
+}
+
+
+.blog-comment-form .col-md-4 {
+  padding-left: 0px;
+}
+
+.blog-comment-form .form-control {
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.blog-comment-form .form-control:hover {
+  border-color: #777;
+}
+
+.blog-comment-form input {
+  height: 45px;
+}
+
+.blog-comment-form input[type="submit"] {
+  background: #222;
+  border-radius: 100px;
+  border: none;
+  color: #ffffff;
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+}
+
+.blog-comment .media img {
+  width: 80px;
+  margin-right: 12px;
+}
+
+.blog-author .media img {
+  display: inline-block;
+  width: 90px;
+  margin-right: 12px;
+}
+
+.blog-comment-form input[type="submit"]:hover {
+  background: #000;
+  border-color: transparent;
 }
 
 /*---------------------------------------
