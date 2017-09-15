@@ -1,0 +1,10 @@
+
+.col-md-9{
+position: absolute;
+height: 900px;
+}
+.col-md-12{
+  position: relative;
+  height: auto;
+  border-color: black;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+
+  .col-md-9{
+  height: 350px;
+  border: 2px solid black;
+  }
+  .col-md-8{
+    position: relative;
+    height: auto;
+    border-color: black;
+  }
+
+  </style>
+
+  <title>CRUD TASK</title>
+
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="sampleApp">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="nav">
+          <li><a href="#Company"> Company </a></li>
+          <li><a href="#Employee"> Employee </a></li>
+        </ul>
+      </div>
+      <div class="col-md-9">
+
+
+
+<div ng-view></div>
+
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div class="col-md-4">
+
+</div>
+<div class="col-md-8">
+
+
+</div>
+
+</div>
+</div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

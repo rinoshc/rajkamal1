@@ -1,0 +1,26 @@
+{
+    "topmenu":
+    [
+        {
+            "item": "File"
+        },
+        {
+            "item": "Help"
+        },
+        {
+            "item": "Edit"
+        },
+        {
+            "item": "View"
+        },
+        {
+            "item": "Go"
+        },
+        {
+            "item": "Tools"
+        },
+        {
+            "item": "Actions"
+        }
+    ]
+}
