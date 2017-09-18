@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON TABLE</title>
+<style>
+td{
+border: 2px solid Red;
+
+}
+
+body{
+color:"blue";
+}
+</style>
+  <script>
+  y={
+
+    "items": [
+  {"cname": "WIPRO", "location": "Banglore", "Product": "E-Bank Basket"},
+  {"cname": "TCS", "location": "Kolkatta", "Product": "Auto Transer"},
+  {"cname": "DELL", "location": "Chennai", "Product": "Smart Wallet"},
+  {"cname": "OFS", "location": "Delhi", "Product": "AML"},
+  {"cname": "IBM", "location": "Chennai", "Product": "LIFI"},
+  {"cname": "Google", "location": "Madurai", "Product": "NEXUS Kit"}
+    ]}
+  }
+
+    "data": {
+         "items": [
+        {"id": "1", "name": "Snatch", "type": "Software Developer"},
+        {"id": "2", "name": "WitchesofEastwick", "type": "UI Developer"},
+        {"id": "3", "name": "X-Men", "type": "action"},
+        {"id": "4", "name": "OrdinaryPeople", "type": "drama"},
+        {"id": "5", "name": "BillyElliot", "type": "drama"},
+        {"id": "6", "name": "ToyStory", "type": "children"}
+    ]}
+  }
+
+  cname=[];location=[];Product=[];
+
+function createTable1(){
+collections=[cname,location,Product];
+	 for(var i=0;i<(y.datas.items).length;i++)
+        	 {
+                 cname[i]=y.datas.items[i].cname;
+                 location[i]=y.datas.items[i].location;
+                 Product[i]=y.datas.items[i].Product;
+             }
+for(i=0;i<(y.datas.items).length;i++){
+   var row=document.getElementById("table1").insertRow();
+  for(j = 0 ; j <1 ; j++){
+    row.insertCell().innerHTML=(y.datas.items[i].cname);
+    row.insertCell().innerHTML=(y.datas.items[i].location);
+    row.insertCell().innerHTML=(y.datas.items[i].Product);
+
+  }
+}
+}
+</script>
+</head>
+<body onload="createTable1()">
+
+<table id="table1" style="border: solid 2px; margin-left:300px;" >
+<tr style="border: solid 2px">
+   <th style="border: solid 2px red">cname</th>
+   <th style="border: solid 2px Red">location </th>
+   <th style="border: solid 2px Red" >Product</th>
+</tr>
+</table>
+
+
+</body>
+</html>
