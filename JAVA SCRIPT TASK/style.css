@@ -12,3 +12,95 @@ div .col-xs-3{
     width:100%;
   }
 }
+
+#addcom{
+  display: none;
+}
+
+#addemp{
+  display: none;
+}
+
+#com{
+  display: none;
+}
+
+
+#emp{
+  display: none;
+}
+#welcome h1{
+  margin-top: 100px;
+  font-weight: 400px;
+}
+
+.navbar .collapse ul li {
+  font-size: 15px;
+}
+
+.nav li {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+
+
+
+#addemp input {
+  height: 60px;
+}
+
+#addemp .col-md-6 {
+  padding-left: 0px;
+}
+
+#addemp .form-control {
+  border: 1px solid #f0f0f0;
+  box-shadow: none;
+  margin: 10px 0px;
+
+}
+
+#addemp .form-control:hover {
+  border-color: #000;
+}
+
+
+#addemp input[type="submit"] {
+  background: #333;
+  border-radius: 100px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#addemp input[type="submit"]:hover {
+  background: #000;
+}
+
+
+
+
+
+#addcom .form-control {
+  border: 1px solid #f0f0f0;
+  box-shadow: none;
+  margin: 10px 0px;
+
+}
+
+#addcom .form-control:hover {
+  border-color: #000;
+}
+
+
+#addcom input[type="submit"] {
+  background: #333;
+  border-radius: 100px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#addcom input[type="submit"]:hover {
+  background: #000;
+}

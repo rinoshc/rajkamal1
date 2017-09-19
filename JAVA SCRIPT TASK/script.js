@@ -1,20 +1,20 @@
 x={
   "data": {
        "items": [
-      {"id": "1", "name": "Snatch", "type": "Software Developer"},
-      {"id": "2", "name": "WitchesofEastwick", "type": "UI Developer"},
-      {"id": "3", "name": "X-Men", "type": "action"},
-      {"id": "4", "name": "OrdinaryPeople", "type": "drama"},
-      {"id": "5", "name": "BillyElliot", "type": "drama"},
-      {"id": "6", "name": "ToyStory", "type": "children"}
+      {"id": "0", "name": "Thushar", "type": "Software Developer"},
+      {"id": "1", "name": "Rajkamal", "type": "UI Developer"},
+      {"id": "2", "name": "Alocious", "type": "HR"},
+      {"id": "3", "name": "Harsha", "type": "Tester"},
+      {"id": "4", "name": "Saravana", "type": "Java Developer"},
+      {"id": "5", "name": "Kannan", "type": "Software Developer"}
   ],
   "com": [
-{"sno":"1","cname": "WIPRO", "loc": "Banglore"},
-{"sno":"2","cname": "TCS", "loc": "Kolkatta"},
-{"sno":"3","cname": "DELL", "loc": "Chennai"},
-{"sno":"4","cname": "OFS", "loc": "Delhi"},
-{"sno":"5","cname": "IBM", "loc": "Chennai"},
-{"sno":"6","cname": "Google", "loc": "Madurai"}
+{"sno":"0","cname": "WIPRO", "loc": "Banglore"},
+{"sno":"1","cname": "TCS", "loc": "Kolkatta"},
+{"sno":"2","cname": "DELL", "loc": "Chennai"},
+{"sno":"3","cname": "OFS", "loc": "Delhi"},
+{"sno":"4","cname": "IBM", "loc": "Chennai"},
+{"sno":"5","cname": "Google", "loc": "Madurai"}
   ]
 }
 }
@@ -23,7 +23,7 @@ id=[];name=[];type=[];
 sno=[];
 cname=[];
 loc=[];
-
+a=[];
 
 
 for(var i=0;i<(x.data.com).length;i++)
@@ -33,14 +33,6 @@ for(var i=0;i<(x.data.com).length;i++)
           cname[i]=x.data.com[i].cname;
           location[i]=x.data.com[i].loc;
           }
-
-
-          for(var i=0;i<6;i++)
-                  {
-console.log(x.data.com[i].cname);
-
-console.log(x.data.com[i].loc);
-}
 
 function createTable(){
 collection=[id,name,type];
@@ -53,32 +45,26 @@ collection=[id,name,type];
            }
 
 columnLength=document.getElementById("table").rows[0].cells.length;
-console.log((x.data.items).length);
-console.log(columnLength);
 
-
-for(i=0;i<(x.data.items).length;i++){
-console.log(collection[i]);
-
-}
 for(i=0;i<(x.data.items).length;i++){
  var row=document.getElementById("table").insertRow();
 for(j = 0 ; j <1 ; j++){
   row.insertCell().innerHTML=(x.data.items[i].id);
   row.insertCell().innerHTML=(x.data.items[i].name);
   row.insertCell().innerHTML=(x.data.items[i].type);
-  row.insertCell().innerHTML=("<button type='button' class='btn btn-sm btn-success'><span class='glyphicon glyphicon-pencil'></span>Edit</button> <button type='button' class='btn btn-sm btn-danger'><span class='glyphicon glyphicon-trash'></span> Delete</button>");
+  var c=(x.data.items[i].id);
+  row.insertCell().innerHTML=("<button type='button' class='btn btn-sm btn-success' ><span class='glyphicon glyphicon-pencil'></span></button> <button type='button'  class='btn btn-sm btn-danger' onClick='onClick1(\""+(x.data.items[i].id)+"\");'><span class='glyphicon glyphicon-trash'></span></button>");
 
 }
-
 }
 for(i=0;i<(x.data.com).length;i++){
  var row=document.getElementById("table1").insertRow();
 for(j = 0 ; j <1 ; j++){
   row.insertCell().innerHTML=(x.data.com[i].sno);
   row.insertCell().innerHTML=(x.data.com[i].cname);
-  row.insertCell().innerHTML=(x.data.com[i].loc);;
-  row.insertCell().innerHTML=("<button type='button' class='btn btn-sm btn-success'><span class='glyphicon glyphicon-pencil'></span>Edit</button> <button type='button' class='btn btn-sm btn-danger'><span class='glyphicon glyphicon-trash'></span> Delete</button>");
+  row.insertCell().innerHTML=(x.data.com[i].loc);
+  var b=(x.data.com[i].sno);
+  row.insertCell().innerHTML=("<button type='button' class='btn btn-sm btn-success' ><span class='glyphicon glyphicon-pencil'></span></button> <button type='button'  class='btn btn-sm btn-danger' onClick='onClick2(\""+(x.data.com[i].sno)+"\");'><span class='glyphicon glyphicon-trash'></span></button>");
 
 }
 
@@ -87,9 +73,10 @@ for(j = 0 ; j <1 ; j++){
 }
 
 
+function addCom(){
+  document.getElementById("addcom").style.display = "block";
 
 
-function onClick(){
 
   var row=document.getElementById("table").insertRow();
   row.insertCell().innerHTML=("7");
@@ -105,29 +92,59 @@ local.set('value',x.data.items);
 
 
 
-function onClick1(){
+function onClick1(c){
 
-
-document.getElementById("table").deleteRow(((x.data.items).length)+1);
-
-
-delete x.data.items[4];
+  console.log("button"+c);
+var s=c++;
+++s;
+  console.log(s);
+document.getElementById("table").deleteRow(s);
+delete x.data.items[s];
 local.set('value',x.data.items);
+
+
+
+}
+
+
+
+
+function onClick2(c){
+
+  console.log("button"+c);
+var s=c++;
+++s;
+  console.log(s);
+document.getElementById("table1").deleteRow(s);
+delete x.data.items[s];
+local.set('value',x.data.com);
+
 
 
 }
 
 function company(){
-document.getElementById("emp").style.display = "none";
+
 document.getElementById("com").style.display = "block";
+document.getElementById("emp").style.display = "none";
+document.getElementById("welcome").style.display = "none";
 }
 
 function employee(){
 document.getElementById("com").style.display = "none";
 document.getElementById("emp").style.display = "block";
+document.getElementById("welcome").style.display = "none";
 }
+function hideaddcom()
+{
+  document.getElementById("addcom").style.display = "none";
 
+}
+function hideaddemp()
+{
+  document.getElementById("addemp").style.display = "none";
 
+}
 
 var local = (function(){
     var setData = function(key,obj){
